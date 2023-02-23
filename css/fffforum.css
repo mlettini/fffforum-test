@@ -7,7 +7,7 @@
   --color-bg-post: #fff;
   --color-bg-meta: #f6f6f6;
 
-  --color-shadow-warm: rgba(160, 160, 160, 0.1);
+  --color-shadow-warm: rgba(190, 190, 190, 0.1);
 
   --font-family: system-ui, sans-serif;
 }
@@ -88,7 +88,8 @@ aside {
   display: flex;
   gap: 20px;
   justify-content: flex-end;
-  padding: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
   text-align: right;
 }
 aside .avatar {
@@ -154,7 +155,7 @@ nav ul {
   align-items: flex-start;
   background-color: var(--color-bg-post);
   border: 1px solid var(--color-border);
-  border-radius: 5px;
+  border-radius: 10px;
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   box-shadow:
   0 2px 10px var(--color-shadow-warm),
@@ -182,7 +183,7 @@ nav ul {
   width: 40px;
 }
 .discussions-list li .meta {
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 10px 10px;
   margin: 20px -20px -20px;
 }
 
@@ -219,7 +220,7 @@ nav ul {
 .discussion {
   background-color: var(--color-bg-post);
   border: 1px solid var(--color-border);
-  border-radius: 5px;
+  border-radius: 10px;
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   box-shadow:
   0 2px 10px var(--color-shadow-warm),
@@ -230,7 +231,7 @@ nav ul {
   padding: 20px;
 }
 .discussion .meta {
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
   margin: -20px -20px 20px;
 }
 
