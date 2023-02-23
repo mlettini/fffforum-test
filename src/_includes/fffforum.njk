@@ -6,11 +6,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="robots" content="noindex">
   <title>DISSCUZIONS</title>
-  <link rel="stylesheet" href="/css/fffforum.css">
+  <link rel="stylesheet" href="{{ '/css/fffforum.css' | url }}">
   <script src="https://kit.fontawesome.com/4573453903.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   {% block header_content %}
   {% endblock %}
 </head>
@@ -18,7 +15,7 @@
 
   <aside>
     {% if htmlID == "post" %}
-      <a href="/" style="margin-right:auto"><i class="fa-regular fa-arrow-left"></i> Back home</a>
+      <a href="{{ '/' | url }}" style="margin-right:auto"><i class="fa-regular fa-arrow-left"></i> Back home</a>
     {% endif %}
     <a href="#"><i class="fa-solid fa-bell"></i></a>
     <a href="#"><img src="/images/matthew-lettini-avatar.jpg" alt="" class="avatar"></a>

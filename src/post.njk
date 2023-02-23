@@ -4,22 +4,12 @@ htmlID: post
 {% extends 'fffforum.njk' %}
 
 {% block content %}
-  <aside>
-    <a href="#"><i class="fa-solid fa-bell"></i></a>
-    <a href="#"><img src="/images/matthew-lettini-avatar.jpg" alt="" class="avatar"></a>
-  </aside>
-
-  <header>
-    <br>
-    Testing the individual discussion post page:
-  </header>
-
   <main>
     <section class="discussion">
       <div class="meta">
         <span><i class="fa-solid fa-thumbtack"></i> Pinned</span>
-        <a href="/fffforum-post"><i class="fa-solid fa-comment"></i> 231</a>
-        <a href="#"><i class="fa-solid fa-hashtag"></i> Category</a>
+        <span><i class="fa-solid fa-comment"></i> 231</span>
+        <a href="{{ '/' | url }}"><i class="fa-solid fa-hashtag"></i> Category</a>
         <a href="#" style="margin-left: auto"><i class="fa-solid fa-ellipsis"></i></a>
       </div>
 
