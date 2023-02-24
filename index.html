@@ -14,64 +14,74 @@
 <body>
 
   <aside>
-    
     <a href="#"><i class="fa-solid fa-bell"></i></a>
     <a href="#"><img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar"></a>
   </aside>
 
   
-  <header>
+  <header class="app-header">
     <h1>Zoom Zoom Drawing Club</h1>
     Testing the discussions list home page:
   </header>
 
   <main>
     <nav class="filter-bar">
-      <ul>
-        <li><a href="#" class="selected">All</a></li>
-        <li><a href="#">Following</a></li>
-        <li><a href="#">Category <i class="fa-solid fa-chevron-down"></i></a></li>
-      </ul>
+      <span>Filter by: All / Following / Category</span>
+      <span>Sort by: Newest / Updated</span>
     </nav>
 
     <section class="discussions-list">
       <ul>
         <li>
-          <h2><a href="/fffforum-test/post/">Show your desk!</a></h2>
-          <a href="/fffforum-test/post/" class="comment">
-            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar">
-            <p>
-              <span><span class="hidden-on-mobile">Started by </span>@mlettini · Nov 21, 2022</span>
-              — Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque...
-            </p>
-          </a>
-          <a href="/fffforum-test/post/" class="comment">
-            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U02VAAP7WGM-g0218fde3a78-512" alt="" class="avatar">
-            <p>
-              <span><span class="hidden-on-mobile">Latest by </span>@bjhess · 10:13am</span>
-              — Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean...
-            </p>
+          <a href="/fffforum-test/post/" class="discussions-list-top">
+            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-mobile">
+            <div>
+              <h2>What are you working on? (March 2023 Edition)</h2>
+              <p>
+                <span>
+                  <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-desktop">
+                  <span class="hidden-on-mobile">Started by </span>Matthew Lettini · Nov 21, 2022
+                </span>
+                — Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+              </p>
+            </div>
           </a>
           <div class="meta">
-            <span><i class="fa-solid fa-thumbtack"></i> Pinned</span>
             <a href="/fffforum-test/post/"><i class="fa-solid fa-comment"></i> 231</a>
-            <a href="#"><i class="fa-solid fa-hashtag"></i> Category</a>
-            <a href="#" style="margin-left: auto"><i class="fa-solid fa-ellipsis"></i></a>
+            <a href="/fffforum-test/post/" class="contributors">
+              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U04NVCZMWSZ-c9a12930d0c6-512" alt="" class="avatar">
+              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U8F8NGMHS-e241068fa133-512" alt="" class="avatar">
+              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U01PZ0L3J90-5e130ea9c877-512" alt="" class="avatar">
+              <img src="https://ca.slack-edge.com/T02UYK6DLNB-U02VAAP7WGM-g0218fde3a78-512" alt="" class="avatar">
+              <span><span class="hidden-on-mobile">Latest by </span>Barry Hess · 11 min ago</span>
+            </figure>
+            <a href="#" style="margin-left: auto">Business</a>
+            <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
           </div>
         </li>
-
         <li>
-          <h2><a href="/fffforum-test/post/">What are you working on? (March 2023 Edition)</a></h2>
-          <a href="/fffforum-test/post/" class="comment">
-            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar">
-            <p>
-              <span><span class="hidden-on-mobile">Started by </span>@mlettini · Feb 20</span>
-              — Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque...
-            </p>
+          <a href="/fffforum-test/post/" class="discussions-list-top">
+            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-mobile">
+            <div>
+              <h2>Show your desk!</h2>
+              <p>
+                <span>
+                  <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-desktop">
+                  <span class="hidden-on-mobile">Started by </span>@mlettini · Jan 23
+                </span>
+                — Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+              </p>
+            </div>
           </a>
           <div class="meta">
-            <a href="#"><i class="fa-solid fa-hashtag"></i> Category</a>
-            <a href="#" style="margin-left: auto"><i class="fa-solid fa-ellipsis"></i></a>
+            <a href="/fffforum-test/post/"><i class="fa-solid fa-comment"></i>6</a>
+            <a href="/fffforum-test/post/" class="contributors">
+              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U04NVCZMWSZ-c9a12930d0c6-512" alt="" class="avatar">
+              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U8F8NGMHS-e241068fa133-512" alt="" class="avatar">
+              <span class="hidden-on-mobile">Latest by </span>@markdude · Jan 28
+            </figure>
+            <a href="#" style="margin-left: auto">Fun</a>
+            <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
           </div>
         </li>
       </ul>
