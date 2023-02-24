@@ -1,13 +1,12 @@
 :root {
-  --color-txt: #222;
-  --color-txt-light: #888;
-  --color-border: #d4d4d4;
+  --color-txt: #2c3138;
+  --color-txt-light: #89919b;
+  --color-border: #d1d7db;
 
-  --color-bg-app: #f6f6f6;
+  --color-bg-app: #f2f5f7;
   --color-bg-post: #fff;
-  --color-bg-meta: #f6f6f6;
 
-  --color-shadow-warm: rgba(190, 190, 190, 0.1);
+  --color-shadow-warm: rgba(145, 150, 170, .05);
 
   --font-family: system-ui, sans-serif;
 }
@@ -15,12 +14,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-txt: #eee;
-    --color-txt-light: #777;
+    --color-txt-light: #aaa;
     --color-border: #333;
 
-    --color-bg-app: #111;
-    --color-bg-post: #222;
-    --color-bg-meta: #1a1a1a;
+    --color-bg-app: #1d1e20;
+    --color-bg-post: #2f2f33;
+
+    --color-shadow-warm: rgba(0, 0, 0, 0.1);
   }
   html {
     -webkit-font-smoothing: antialiased;
@@ -38,7 +38,7 @@
 }
 html {
   background: var(--color-bg-app);
-  font-size: 15px;
+  font-size: 16px;
   height: 100%;
   overflow: auto;
 }
@@ -65,13 +65,14 @@ a:active {
 }
 h1 {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
 }
 h2 {
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.2;
+  margin-bottom: 3px;
 }
 .fa-chevron-down {
   font-size: 0.7em;
@@ -108,7 +109,7 @@ header {
 
 main {
   margin: auto;
-  max-width: 70ch;
+  max-width: 80ch;
   padding: 10px;
 }
 
@@ -146,6 +147,9 @@ nav ul {
   border-bottom-width: 1px;
 }
 
+
+
+
 .discussions-list ul {
   list-style: none;
   margin-block: 15px;
@@ -154,64 +158,97 @@ nav ul {
 .discussions-list li {
   align-items: flex-start;
   background-color: var(--color-bg-post);
-  border: 1px solid var(--color-border);
+  /* border: 1px solid var(--color-border); */
   border-radius: 10px;
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   box-shadow:
   0 2px 10px var(--color-shadow-warm),
   0 4px 4px var(--color-shadow-warm),
   0 25px 19px -11px var(--color-shadow-warm),
   0 10px 30px var(--color-shadow-warm);
-  gap: 15px;
-  margin-bottom: 15px;
-  padding: 20px;
+  margin-block: 15px;
+  padding: 25px;
 }
-.discussions-list li .comment {
+.discussions-list-top {
   align-items: flex-start;
   display: flex;
+  flex-direction: row;
   gap: 10px;
-  margin-block: 15px;
+  margin-bottom: 20px;
 }
-.discussions-list li .comment:not(:hover) span {
+.discussions-list-top:hover {
+  text-decoration: none;
+}
+.discussions-list-top .avatar {
+  aspect-ratio: 1 / 1;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+}
+.discussions-list-top span {
   color: var(--color-txt-light);
 }
-.discussions-list li .avatar {
-  aspect-ratio: 1 / 1;
-  border-radius: 40px;
-  height: 40px;
-  margin-top: 1px;
-  width: 40px;
+.discussions-list-top span .avatar {
+  height: 24px;
+  margin-block: -5px -2px;
+  vertical-align: middle;
+  width: 24px;
 }
-.discussions-list li .meta {
-  border-radius: 0 0 10px 10px;
-  margin: 20px -20px -20px;
+.discussions-list-top p {
+  max-height: 72px;
+  overflow: hidden;
 }
-
-
-
 .meta {
-  background-color: var(--color-bg-meta);
+  align-items: center;
   color: var(--color-txt-light);
   display: flex;
-  flex-wrap: wrap;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
   gap: 2px;
   line-height: 1;
-  padding: 5px 10px 4px;
+  margin: 30px -10px -10px -5px;
 }
-.meta a,
-.meta span {
+@media (min-width: 900px) {
+  .meta {
+    margin-left: 50px;
+  }
+}
+.meta > a,
+.meta > span {
+  align-items: center;
   border-radius: 5px;
-  padding: 10px;
+  display: inline-flex;
+  gap: 5px;
+  height: 34px;
+  justify-content: center;
+  line-height: 1;
+  padding-inline: 10px;
 }
-.meta a:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+.meta > a:hover {
+  background-color: var(--color-bg-app);
   color: var(--color-txt);
   text-decoration: none;
 }
-.meta span {
+.meta > span {
   cursor: default;
+}
+.meta .contributors {
+  align-items: center;
+  display: inline-flex;
+  margin-right: 5px;
+  padding-left: 5px;
+}
+.meta .contributors .avatar {
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--color-bg-post);
+  border-radius: 28px;
+  height: 28px;
+  margin-right: -20px;
+  width: 28px;
+}
+.meta .contributors:hover .avatar {
+  border-color: #eee;
+}
+.meta .contributors .avatar:last-of-type {
+  margin-right: 0;
 }
 
 
@@ -236,8 +273,13 @@ nav ul {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
   .hidden-on-mobile {
-    display: none;
+    display: none !important;
+  }
+}
+@media (min-width: 900px) {
+  .hidden-on-desktop {
+    display: none !important;
   }
 }

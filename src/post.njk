@@ -4,20 +4,76 @@ htmlID: post
 {% extends 'fffforum.njk' %}
 
 {% block content %}
-  <main>
-    <section class="discussion">
-      <div class="meta">
-        <span><i class="fa-solid fa-thumbtack"></i> Pinned</span>
-        <span><i class="fa-solid fa-comment"></i> 231</span>
-        <a href="{{ '/' | url }}"><i class="fa-solid fa-hashtag"></i> Category</a>
-        <a href="#" style="margin-left: auto"><i class="fa-solid fa-ellipsis"></i></a>
-      </div>
+  <header class="app-header">
+    <h1>Zoom Zoom Drawing Club</h1>
+    Testing an individual discussion post page:
+  </header>
 
-      <div>
-        <h1>Show your desk!</h1>
-        <p>
-          First post
-        </p>
+  <main>
+    <a href="{{ '/' | url }}" class="back-btn">
+      <i class="fa-regular fa-circle-arrow-left"></i>
+      <span>Back home</span>
+    </a>
+
+    <section class="discussion">
+      <header class="discussion-top">
+        <div class="meta">
+          <a href="{{ '/' | url }}"><i class="fa-regular fa-hashtag"></i> Business</a>
+          <a href="#"><i class="fa-solid fa-comment"></i> 231 Comments</a>
+          <span>30 Participants</span>
+          <span>5 Following</span>
+          <a href="#"><i class="fa-regular fa-link-simple"></i></a>
+          <a href="#" style="margin-left:auto"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+        <h2>What are you working on? (March 2023 Edition)</h2>
+      </header>
+      <div class="discussion-comments">
+        <div class="discussion-comment">
+          <div class="meta">
+            <span>Nov 21, 2022</span>
+            <a href="#"><i class="fa-regular fa-link-simple"></i></a>
+            <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+          </div>
+          <div class="discussion-comment-wrapper">
+            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-mobile">
+            <div class="discussion-comment-content">
+              <div class="discussion-comment-meta-mobile">
+                <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-desktop">
+                <h3>Matthew Lettini</h3>
+              </div>
+              <p>Radishes told possible eaten killed names newspaper wood saddle them, keep. Doorstep assertion gently always parsley mouse impose. Care escaped killed lippity railroad father suspension took palaver. Knees bottom answer life implored currant live free peddler. Fearfully ones came look sneezed straight loaf, mouse intelligence pinafore started.</p>
+              <p>She calm till sleep, stared follow bushes chewing rolled french. Even broken very keen spent peeped safe basket, ones hungry blaze. Father heard saddle implored soon basked amongst, slender josephine.</p>
+              <ul>
+                <li>Sooner feeling along till idea minutes, hurt.</li>
+                <li>Unwittingly significance into five reached brief disease inability tells.</li>
+              </ul>
+              <p>News starving deserts bundle came assure. Arms sticks itself sudden lassy, flew fields. Think armchair wait bread kneeling beans. Sure chewing learned cucumber rolled bushes. Revealed fright victory moment stayed, stairs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="discussion-comment">
+          <div class="meta">
+            <span>Nov 21, 2022</span>
+            <a href="#"><i class="fa-regular fa-link-simple"></i></a>
+            <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+          </div>
+          <div class="discussion-comment-wrapper">
+            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-mobile">
+            <div class="discussion-comment-content">
+              <div class="discussion-comment-meta-mobile">
+                <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-desktop">
+                <h3>Matthew Lettini</h3>
+              </div>
+              <p>Radishes told possible eaten killed names newspaper wood saddle them, keep. Doorstep assertion gently always parsley mouse impose. Care escaped killed lippity railroad father suspension took palaver. Knees bottom answer life implored currant live free peddler. Fearfully ones came look sneezed straight loaf, mouse intelligence pinafore started.</p>
+              <p>She calm till sleep, stared follow bushes chewing rolled french. Even broken very keen spent peeped safe basket, ones hungry blaze. Father heard saddle implored soon basked amongst, slender josephine.</p>
+              <ul>
+                <li>Sooner feeling along till idea minutes, hurt.</li>
+                <li>Unwittingly significance into five reached brief disease inability tells.</li>
+              </ul>
+              <p>News starving deserts bundle came assure. Arms sticks itself sudden lassy, flew fields. Think armchair wait bread kneeling beans. Sure chewing learned cucumber rolled bushes. Revealed fright victory moment stayed, stairs.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

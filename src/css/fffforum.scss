@@ -1,0 +1,354 @@
+:root {
+  --color-txt: #2c3138;
+  --color-txt-light: #89919b;
+  --color-primary: #1461d2;
+  --color-border: #d1d7db;
+
+  --color-bg-app: #f2f5f7;
+  --color-bg-main: #fff;
+
+  --color-shadow-warm: rgba(145, 150, 180, .05);
+
+  --font-family: system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-txt: #eee;
+    --color-txt-light: #aaa;
+    --color-border: #333;
+
+    --color-bg-app: #1d1e20;
+    --color-bg-main: #2f2f33;
+
+    --color-shadow-warm: rgba(0, 0, 0, 0.1);
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
+
+// Base
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  overflow-wrap: break-word;
+  padding: 0;
+}
+html {
+  background: var(--color-bg-app);
+  font-size: 16px;
+  height: 100%;
+  overflow: auto;
+}
+body {
+  color: var(--color-txt);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: auto;
+  min-height: 100%;
+  padding: 0;
+}
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.fa-chevron-down {
+  font-size: 0.7em;
+  margin: -2px 0 0 2px;
+  vertical-align: middle;
+}
+
+
+
+// Layout
+aside {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: right;
+  .avatar {
+    aspect-ratio: 1 / 1;
+    border-radius: 30px;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    width: 30px;
+  }
+}
+
+.app-header {
+  margin: 30px 15px;
+  text-align: center;
+}
+
+main {
+  margin: auto;
+  max-width: 80ch;
+  padding: 10px;
+}
+
+.back-btn {
+  align-items: center;
+  color: var(--color-primary);
+  display: inline-flex;
+  font-size: 14px;
+  gap: 5px;
+  margin-bottom: 15px;
+  &:hover {
+    text-decoration: none;
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.filter-bar {
+  color: var(--color-txt-light);
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+// Discussion List
+.discussions-list ul {
+  list-style: none;
+  margin-block: 15px;
+  padding: 0;
+}
+.discussions-list li {
+  align-items: flex-start;
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  box-shadow:
+  0 2px 10px var(--color-shadow-warm),
+  0 4px 4px var(--color-shadow-warm),
+  0 25px 25px -10px var(--color-shadow-warm);
+  margin-block: 15px;
+  padding: 25px;
+  .meta {
+    margin: 30px -10px -10px -5px;
+    @media (min-width: 900px) {
+      margin-left: 50px;
+    }
+  }
+}
+.discussions-list-top {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+  &:hover {
+    text-decoration: none;
+  }
+  .avatar {
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+  }
+  span {
+    color: var(--color-txt-light);
+  }
+  span .avatar {
+    height: 24px;
+    margin-block: -5px -2px;
+    vertical-align: middle;
+    width: 24px;
+  }
+  p {
+    max-height: 72px;
+    overflow: hidden;
+  }
+}
+.meta {
+  align-items: center;
+  color: var(--color-txt-light);
+  display: flex;
+  font-size: 14px;
+  gap: 2px;
+  line-height: 1;
+  > a,
+  > span {
+    align-items: center;
+    border-radius: 10px;
+    display: inline-flex;
+    gap: 5px;
+    height: 34px;
+    justify-content: center;
+    line-height: 1;
+    padding-inline: 10px;
+  }
+  > a:hover {
+    background-color: var(--color-bg-app);
+    color: var(--color-txt);
+    text-decoration: none;
+  }
+  > span {
+    cursor: default;
+  }
+}
+.contributors {
+  align-items: center;
+  display: inline-flex;
+  margin-right: 5px;
+  padding-left: 5px;
+  .avatar {
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--color-bg-main);
+    border-radius: 28px;
+    height: 28px;
+    margin-right: -20px;
+    width: 28px;
+  }
+  &:hover .avatar {
+    border-color: #eee;
+  }
+  .avatar:last-of-type {
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+
+.discussion {
+  align-items: flex-start;
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  box-shadow:
+  0 2px 10px var(--color-shadow-warm),
+  0 4px 4px var(--color-shadow-warm),
+  0 25px 25px -10px var(--color-shadow-warm);
+  padding-inline: 25px;
+}
+.discussion-top {
+  background: var(--color-bg-main);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: -1px;
+  padding-block: 20px;
+  position: sticky;
+  // text-align: center;
+  top: 0;
+  z-index: 2;
+  .meta {
+    margin-left: -10px;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+.discussion-comment {
+  border-top: 1px solid var(--color-border);
+  padding-block: 5px 0;
+  position: relative;
+}
+.discussion-comment .meta {
+  justify-content: flex-end;
+}
+.discussion-comment-wrapper {
+  padding-bottom: 25px;
+  time.hidden-on-mobile {
+    color: var(--color-txt-light);
+    font-size: 14px;
+    line-height: 25px;
+    padding-top: 3px;
+  }
+  .avatar {
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+  }
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+  }
+}
+
+.discussion-comment-meta-mobile {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  .avatar {
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    height: 24px;
+    width: 24px;
+  }
+  time {
+    color: var(--color-txt-light);
+  }
+}
+
+.discussion-comment-content {
+  p, ul, ol {
+    margin-block: 20px;
+  }
+  ul, ol {
+    padding-left: 20px;
+  }
+  .discussion-comment-meta-mobile + * {
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Utilities
+@media (max-width: 899px) {
+  .hidden-on-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: 900px) {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+}
