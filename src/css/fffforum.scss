@@ -110,16 +110,15 @@ aside {
 main {
   margin: auto;
   max-width: 80ch;
-  padding: 10px;
+  padding: 10px 10px 0;
 }
 
 .back-btn {
-  align-items: center;
+  align-items: baseline;
   color: var(--color-primary);
-  display: inline-flex;
+  display: flex;
   font-size: 14px;
   gap: 5px;
-  margin-bottom: 15px;
   &:hover {
     text-decoration: none;
     span {
@@ -131,6 +130,7 @@ main {
 .filter-bar {
   color: var(--color-txt-light);
   display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
   justify-content: space-between;
 }
@@ -142,24 +142,31 @@ main {
 
 // Discussion List
 .discussions-list ul {
-  list-style: none;
-  margin-block: 15px;
-  padding: 0;
-}
-.discussions-list li {
-  align-items: flex-start;
   background-color: var(--color-bg-main);
   border: 1px solid var(--color-border);
-  border-radius: 15px;
+  border-width: 1px 0;
   box-shadow:
   0 2px 10px var(--color-shadow-warm),
   0 4px 4px var(--color-shadow-warm),
   0 25px 25px -10px var(--color-shadow-warm);
-  margin-block: 15px;
+  list-style: none;
+  margin: 15px -10px -1px;
+  padding: 0;
+  @media (min-width: 600px) {
+    border-radius: 15px;
+    border-width: 1px;
+    margin: 15px 0;
+  }
+}
+.discussions-list li {
+  align-items: flex-start;
   padding: 25px;
+  &:not(:first-of-type) {
+    border-top: 1px solid var(--color-border);
+  }
   .meta {
-    margin: 30px -10px -10px -5px;
-    @media (min-width: 900px) {
+    margin: 15px -5px -5px -5px;
+    @media (min-width: 600px) {
       margin-left: 50px;
     }
   }
@@ -169,7 +176,7 @@ main {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   &:hover {
     text-decoration: none;
   }
@@ -189,7 +196,7 @@ main {
     width: 24px;
   }
   p {
-    max-height: 72px;
+    max-height: 48px;
     overflow: hidden;
   }
 }
@@ -197,9 +204,13 @@ main {
   align-items: center;
   color: var(--color-txt-light);
   display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
   gap: 2px;
   line-height: 1;
+  .spacer {
+    flex-grow: 100;
+  }
   > a,
   > span {
     align-items: center;
@@ -219,25 +230,25 @@ main {
   > span {
     cursor: default;
   }
-}
-.contributors {
-  align-items: center;
-  display: inline-flex;
-  margin-right: 5px;
-  padding-left: 5px;
-  .avatar {
-    aspect-ratio: 1 / 1;
-    border: 2px solid var(--color-bg-main);
-    border-radius: 28px;
-    height: 28px;
-    margin-right: -20px;
-    width: 28px;
-  }
-  &:hover .avatar {
-    border-color: #eee;
-  }
-  .avatar:last-of-type {
-    margin-right: 0;
+  > .contributors {
+    align-items: center;
+    display: inline-flex;
+    margin-right: 5px;
+    padding-left: 5px;
+    .avatar {
+      aspect-ratio: 1 / 1;
+      border: 2px solid var(--color-bg-main);
+      border-radius: 28px;
+      height: 28px;
+      margin-right: -20px;
+      width: 28px;
+    }
+    &:hover .avatar {
+      border-color: #eee;
+    }
+    .avatar:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
@@ -250,12 +261,18 @@ main {
   align-items: flex-start;
   background-color: var(--color-bg-main);
   border: 1px solid var(--color-border);
-  border-radius: 15px;
+  border-width: 1px 0;
   box-shadow:
   0 2px 10px var(--color-shadow-warm),
   0 4px 4px var(--color-shadow-warm),
   0 25px 25px -10px var(--color-shadow-warm);
+  margin: 15px -10px -1px;
   padding-inline: 25px;
+  @media (min-width: 600px) {
+    border-radius: 15px;
+    border-width: 1px;
+    margin: 15px 0;
+  }
 }
 .discussion-top {
   background: var(--color-bg-main);
@@ -342,12 +359,12 @@ main {
 
 
 // Utilities
-@media (max-width: 899px) {
+@media (max-width: 599px) {
   .hidden-on-mobile {
     display: none !important;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .hidden-on-desktop {
     display: none !important;
   }
