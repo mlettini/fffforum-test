@@ -5,13 +5,13 @@
     <div class="form-wrapper">
       <form>
         <div class="field">
-          <h1>Welcome to Addison!</h1>
-          <p>Addison is a <em>super</em> simple app to build your own website. In just a few steps, you can have your own multi-page home on the web!</p>
-          <br>
-          <label>To get started, what’s your name?</label>
+          <h1>Hi First Name!</h1>
+          <p>Addison is a <em>super</em> simple personal website builder. In just a few steps, you can have your own multi-page home on the web!</p>
+          <label>First, what’s your name?</label>
           <input type="text" placeholder="Enter your name here">
           <div class="submit">
-            <a href="{{ '/step-2/' | url }}" class="button">Next</a>
+            <a href="{{ '/' | url }}" class="button secondary">Back</a>
+            <a href="{{ '/step-2' | url }}" class="button">Next</a>
           </div>
         </div>
         <small>Don’t worry, you can change everything later.</small>
@@ -20,6 +20,9 @@
 
     <div class="preview-wrapper hidden-on-mobile">
       <small>As you fill out the form on the left, we’ll show you a preview of your new site here on the right.</small>
+      <div class="preview">
+
+      </div>
     </div>
   </div>
 {% endblock %}
