@@ -7,6 +7,9 @@
   --menu-text-color: #3d3d3d;
   --menu-bg: #eedde8;
   --menu-hover-bg: #cdc1c9;
+
+  --sticky-text-color: rgba(255, 255, 255, 0.8);
+  --sticky-bg: rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -22,6 +25,10 @@ body {
   background-image: url('../images/bg.png');
   background-position: top right;
 }
+img {
+  border-radius: 1000px;
+  object-fit: cover;
+}
 
 .circle {
   border-radius: 1000px;
@@ -34,7 +41,6 @@ body {
   &.red {
     background-color: var(--red);
     &:after {
-      background-color: var(--menu-bg);
       border-radius: 1000px;
       content: "";
       height: 2px;
@@ -42,12 +48,17 @@ body {
       position: absolute;
       top: 6px;
       width: 10px;
+      .menu & {
+        background-color: var(--menu-bg);
+      }
+      #sticky & {
+        background-color: var(--sticky-bg);
+      }
     }
   }
   &.yellow {
     background-color: var(--yellow);
     &:after {
-      background-color: var(--menu-bg);
       border-radius: 1000px;
       content: "";
       height: 10px;
@@ -55,16 +66,21 @@ body {
       position: absolute;
       top: -1px;
       width: 10px;
-      .item:hover &,
-      .teammate:hover & {
+      .menu & {
+        background-color: var(--menu-bg);
+      }
+      .menu .item:hover &,
+      .menu .teammate:hover & {
         background-color: var(--menu-hover-bg);
+      }
+      #sticky & {
+        background-color: var(--sticky-bg);
       }
     }
   }
   &.away {
     background-color: var(--away);
     &:after {
-      background-color: var(--menu-bg);
       border-radius: 1000px;
       content: "";
       height: 12px;
@@ -72,9 +88,15 @@ body {
       position: absolute;
       top: 1px;
       width: 12px;
-      .item:hover &,
-      .teammate:hover & {
+      .menu & {
+        background-color: var(--menu-bg);
+      }
+      .menu .item:hover &,
+      .menu .teammate:hover & {
         background-color: var(--menu-hover-bg);
+      }
+      #sticky & {
+        background-color: var(--sticky-bg);
       }
     }
   }
@@ -170,15 +192,8 @@ body {
         box-shadow: 0 0 0 2px var(--menu-hover-bg);
       }
     }
-    &.away {
-      h3, .status, time {
-        color: rgba(0, 0, 0, 0.4);
-      }
-      .status {
-        font-size: 12px;
-        line-height: 1;
-        padding-block: 4px 2px;
-      }
+    &.away .status {
+      color: rgba(0, 0, 0, 0.4);
     }
     img {
       border-radius: 1000px;
@@ -189,6 +204,7 @@ body {
     .circle {
       box-shadow: 0 0 0 2px var(--menu-bg);
       margin-left: -25px;
+      margin-top: 25px;
       position: absolute;
     }
     h3 {
@@ -196,8 +212,8 @@ body {
       font-weight: 600;
     }
     .status {
-      line-height: 1.2;
-      padding-block: 6px 4px;
+      line-height: 1.3;
+      padding-block: 4px 2px;
       span {
         display: inline-block;
         font-size: 16px;
@@ -214,6 +230,63 @@ body {
       color: rgba(0, 0, 0, 0.3);
       font-size: 12px;
       margin-left: auto;
+    }
+  }
+}
+
+
+
+#sticky {
+  background-clip: padding-box;
+  background-color: var(--sticky-bg);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  color: var(--sticky-text-color);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 15px;
+  position: absolute;
+  right: 1000px;
+  top: 100px;
+  .teammate {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    user-select: none;
+    &.red,
+    &.yellow,
+    &.away {
+      opacity: 0.5;
+    }
+  }
+  img {
+    border-radius: 1000px;
+  }
+  .image {
+    height: 60px;
+    position: relative;
+    width: 60px;
+    .circle {
+      bottom: 0;
+      box-shadow: 0 0 0 3px var(--sticky-bg);
+      position: absolute;
+      right: 0;
+    }
+  }
+  h3 {
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    gap: 5px;
+    text-align: center;
+    white-space: nowrap;
+    span {
+      font-size: 16px;
     }
   }
 }
