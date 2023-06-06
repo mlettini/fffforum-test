@@ -1,75 +1,136 @@
----
-htmlID: discussions
----
-{% extends 'fffforum.njk' %}
+{% extends 'presence.njk' %}
 
 {% block content %}
-  <header class="app-header">
-    <h1>Zoom Zoom Drawing Club</h1>
-    Testing the discussions list home page:
-  </header>
+  <div id="menubar">
+    <div class="circle green"></div>
+    <div class="status">✍️</div>
+  </div>
 
-  <main>
-    <nav class="filter-bar">
-      <span>Filter by: All / Following / Category</span>
-      <span>Sort by: Newest / Updated</span>
-    </nav>
+  <div class="menu">
 
-    <section class="discussions-list">
-      <ul>
-        <li>
-          <a href="{{ '/post/' | url }}" class="discussions-list-top">
-            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-mobile">
-            <div>
-              <h2>What are you working on? (March 2023 Edition)</h2>
-              <p>
-                <span>
-                  <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-desktop">
-                  <span class="hidden-on-mobile">Started by </span>Matthew Lettini · Nov 21, 2022
-                </span>
-                — Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-              </p>
-            </div>
-          </a>
-          <div class="meta">
-            <a href="{{ '/post/' | url }}"><i class="fa-solid fa-comment"></i> 231</a>
-            <a href="{{ '/post/' | url }}" class="contributors">
-              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U04NVCZMWSZ-c9a12930d0c6-512" alt="" class="avatar">
-              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U8F8NGMHS-e241068fa133-512" alt="" class="avatar">
-              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U01PZ0L3J90-5e130ea9c877-512" alt="" class="avatar">
-              <img src="https://ca.slack-edge.com/T02UYK6DLNB-U02VAAP7WGM-g0218fde3a78-512" alt="" class="avatar">
-              <span><span class="hidden-on-mobile">Latest by Barry Hess · </span>11 min ago</span>
-            </figure>
-            <a href="#" style="margin-left: auto">Business</a>
-            <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
-          </div>
-        </li>
-        <li>
-          <a href="{{ '/post/' | url }}" class="discussions-list-top">
-            <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-mobile">
-            <div>
-              <h2>Show your desk!</h2>
-              <p>
-                <span>
-                  <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" class="avatar hidden-on-desktop">
-                  <span class="hidden-on-mobile">Started by </span>@mlettini · Jan 23
-                </span>
-                — Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-              </p>
-            </div>
-          </a>
-          <div class="meta">
-            <a href="{{ '/post/' | url }}"><i class="fa-solid fa-comment"></i>6</a>
-            <a href="{{ '/post/' | url }}" class="contributors">
-              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U04NVCZMWSZ-c9a12930d0c6-512" alt="" class="avatar">
-              <img src="https://ca.slack-edge.com/T0ENQ0W2Z-U8F8NGMHS-e241068fa133-512" alt="" class="avatar">
-              <span class="hidden-on-mobile">Latest by @markdude · </span>Jan 28
-            </figure>
-            <a href="#" style="margin-left: auto">Fun</a>
-            <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </main>
+    <h4>Status</h4>
+    <div class="item">
+      <span>✍️</span>
+      Writing a blog post
+      <aside>⌘S</aside>
+    </div>
+
+    <hr>
+
+    <h4>Presence</h4>
+    <div class="item selected">
+      <div>
+        ✓
+        <div class="circle green"></div>
+      </div>
+      Available
+      <aside>⌘1</aside>
+    </div>
+    <div class="item">
+      <div><div class="circle red"></div></div>
+      Do Not Disturb
+      <aside>⌘2</aside>
+    </div>
+    <div class="item">
+      <div><div class="circle away"></div></div>
+      Away
+      <aside>⌘3</aside>
+    </div>
+
+    <hr>
+
+    <div class="team">
+      <h4>Your Team</h4>
+      <div class="teammate red">
+        <img src="https://yt3.ggpht.com/a-/AN66SAzLSNpfJ0sldByoeIu3IyVDS3dDKiCS3teO-Q=s900-mo-c-c0xffffffff-rj-k-no" alt="" height="40" width="40">
+        <div>
+          <div class="circle red"></div>
+          <h3>Bruce Wayne</h3>
+          <div class="status"><span>🏙️</span> On patrol in Gotham</div>
+          <time>1:37pm Gotham</time>
+        </div>
+        <i class="fa-regular fa-chevron-right"></i>
+      </div>
+      <div class="teammate green">
+        <img src="https://4.bp.blogspot.com/-Tek3yg7Yh54/VVj1FwY8CrI/AAAAAAAAbiw/bqQfLjDuYYU/s1600/Clark-Kent-superman-36885818-1920-800%2B(640x534).jpg" alt="" height="40" width="40">
+        <div>
+          <div class="green circle"></div>
+          <h3>Clark Kent</h3>
+          <div class="status"><span>💼</span> Making journalistic integrity my whole personality</div>
+          <time>10:37am Metropolis</time>
+        </div>
+        <i class="fa-regular fa-chevron-right"></i>
+      </div>
+      <div class="teammate yellow">
+        <img src="https://www.looper.com/img/gallery/catwoman-hunted-release-date-characters-and-plot-what-we-know-so-far/intro-1634598411.jpg" alt="" height="40" width="40">
+        <div>
+          <div class="circle yellow"></div>
+          <h3>Selina Kyle</h3>
+          <div class="status"><span>💎</span> Definitely at my desk</div>
+          <time>1:37pm Gotham</time>
+        </div>
+        <i class="fa-regular fa-chevron-right"></i>
+      </div>
+      <div class="teammate away">
+        <img src="https://vignette.wikia.nocookie.net/marvelcrossroads/images/1/1c/Young_Barry_Allen_(Earth-9925).jpg/revision/latest?cb=20160529022850" alt="" height="40" width="40">
+        <div>
+          <div class="circle away"></div>
+          <h3>Barry Allen</h3>
+          <div class="status">No status…</div>
+          <time>12:37pm Central City</time>
+        </div>
+        <i class="fa-regular fa-chevron-right"></i>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="item">
+      Toggle Mini-Presence
+      <aside>⌘M</aside>
+    </div>
+    <div class="item">
+      Settings…
+    </div>
+  </div>
+
+
+
+  <div id="sticky" draggable="true">
+    <div class="teammate green" title="Writing a blog post">
+      <div class="image">
+        <div class="circle green"></div>
+        <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" height="60" width="60">
+      </div>
+      <h3><span>✍️</span> You</h3>
+    </div>
+    <div class="teammate red" title="On patrol in Gotham">
+      <div class="image">
+        <div class="circle red"></div>
+        <img src="https://yt3.ggpht.com/a-/AN66SAzLSNpfJ0sldByoeIu3IyVDS3dDKiCS3teO-Q=s900-mo-c-c0xffffffff-rj-k-no" alt="" height="60" width="60">
+      </div>
+      <h3><span>🏙️</span> Bruce Wayne</h3>
+    </div>
+    <div class="teammate green" title="Making journalistic integrity my whole personality">
+      <div class="image">
+        <div class="circle green"></div>
+        <img src="https://4.bp.blogspot.com/-Tek3yg7Yh54/VVj1FwY8CrI/AAAAAAAAbiw/bqQfLjDuYYU/s1600/Clark-Kent-superman-36885818-1920-800%2B(640x534).jpg" alt="" height="60" width="60">
+      </div>
+      <h3><span>💼</span> Clark Kent</h3>
+    </div>
+    <div class="teammate yellow" title="Definitely at my desk">
+      <div class="image">
+        <div class="circle yellow"></div>
+        <img src="https://www.looper.com/img/gallery/catwoman-hunted-release-date-characters-and-plot-what-we-know-so-far/intro-1634598411.jpg" alt="" height="60" width="60">
+      </div>
+      <h3><span>💎</span> Selina Kyle</h3>
+    </div>
+    <div class="teammate away" title="No status…">
+      <div class="image">
+        <div class="circle away"></div>
+        <img src="https://vignette.wikia.nocookie.net/marvelcrossroads/images/1/1c/Young_Barry_Allen_(Earth-9925).jpg/revision/latest?cb=20160529022850" alt="" height="60" width="60">
+      </div>
+      <h3>Barry Allen</h3>
+    </div>
+  </div>
 {% endblock %}
