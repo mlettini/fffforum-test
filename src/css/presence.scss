@@ -1,0 +1,219 @@
+:root {
+  --green: #50a261;
+  --red: #df4f4a;
+  --yellow: #e6b34e;
+  --away: #b8adb5;
+
+  --menu-text-color: #3d3d3d;
+  --menu-bg: #eedde8;
+  --menu-hover-bg: #cdc1c9;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: default;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  background-image: url('../images/bg.png');
+  background-position: top right;
+}
+
+.circle {
+  border-radius: 1000px;
+  height: 14px;
+  position: relative;
+  width: 14px;
+  &.green {
+    background-color: var(--green);
+  }
+  &.red {
+    background-color: var(--red);
+    &:after {
+      background-color: var(--menu-bg);
+      border-radius: 1000px;
+      content: "";
+      height: 2px;
+      left: 2px;
+      position: absolute;
+      top: 6px;
+      width: 10px;
+    }
+  }
+  &.yellow {
+    background-color: var(--yellow);
+    &:after {
+      background-color: var(--menu-bg);
+      border-radius: 1000px;
+      content: "";
+      height: 10px;
+      left: -1px;
+      position: absolute;
+      top: -1px;
+      width: 10px;
+      .item:hover &,
+      .teammate:hover & {
+        background-color: var(--menu-hover-bg);
+      }
+    }
+  }
+  &.away {
+    background-color: var(--away);
+    &:after {
+      background-color: var(--menu-bg);
+      border-radius: 1000px;
+      content: "";
+      height: 12px;
+      left: 1px;
+      position: absolute;
+      top: 1px;
+      width: 12px;
+      .item:hover &,
+      .teammate:hover & {
+        background-color: var(--menu-hover-bg);
+      }
+    }
+  }
+}
+
+
+#menubar {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  font-size: 16px;
+  gap: 5px;
+  height: 25px;
+  justify-content: center;
+  padding-inline: 10px;
+  position: absolute;
+  right: 500px;
+  top: 0;
+}
+.menu {
+  background-clip: padding-box;
+  background-color: var(--menu-bg);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  color: var(--menu-text-color);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 10px 15px 5px;
+  position: absolute;
+  right: 215px;
+  top: 25px;
+  width: 340px;
+  h4 {
+    font-size: 13px;
+    margin-block: 5px 5px;
+  }
+  hr {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    height: 1px;
+    margin-block: 10px;
+    width: 100%;
+  }
+
+  .item {
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    height: 26px;
+    line-height: 1;
+    margin-inline: -10px;
+    padding: 0 10px;
+    &:hover {
+      background-color: var(--menu-hover-bg);
+    }
+    > span {
+      font-size: 16px;
+    }
+    > div {
+      align-items: center;
+      display: flex;
+      font-weight: 600;
+      gap: 10px;
+      justify-content: flex-end;
+      width: 35px;
+    }
+    aside {
+      color: rgba(0, 0, 0, 0.3);
+      letter-spacing: 2px;
+      margin-left: auto;
+    }
+    .fa-chevron-right {
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 12px;
+      margin-left: auto;
+    }
+  }
+
+  .teammate {
+    align-items: flex-start;
+    border-radius: 5px;
+    display: flex;
+    gap: 15px;
+    margin-inline: -10px;
+    padding: 10px;
+    &:hover {
+      background-color: var(--menu-hover-bg);
+      .circle {
+        box-shadow: 0 0 0 2px var(--menu-hover-bg);
+      }
+    }
+    &.away {
+      h3, .status, time {
+        color: rgba(0, 0, 0, 0.4);
+      }
+      .status {
+        font-size: 12px;
+        line-height: 1;
+        padding-block: 4px 2px;
+      }
+    }
+    img {
+      border-radius: 1000px;
+      height: 40px;
+      object-fit: cover;
+      width: 40px;
+    }
+    .circle {
+      box-shadow: 0 0 0 2px var(--menu-bg);
+      margin-left: -25px;
+      position: absolute;
+    }
+    h3 {
+      font-size: inherit;
+      font-weight: 600;
+    }
+    .status {
+      line-height: 1.2;
+      padding-block: 6px 4px;
+      span {
+        display: inline-block;
+        font-size: 16px;
+        margin: -4px 1px -2px 0;
+        vertical-align: middle;
+      }
+    }
+    time {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 12px;
+    }
+    .fa-chevron-right {
+      align-self: center;
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 12px;
+      margin-left: auto;
+    }
+  }
+}
