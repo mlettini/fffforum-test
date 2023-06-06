@@ -48,7 +48,7 @@ img {
       position: absolute;
       top: 6px;
       width: 10px;
-      .menu & {
+      #menu & {
         background-color: var(--menu-bg);
       }
       #sticky & {
@@ -66,11 +66,11 @@ img {
       position: absolute;
       top: -1px;
       width: 10px;
-      .menu & {
+      #menu & {
         background-color: var(--menu-bg);
       }
-      .menu .item:hover &,
-      .menu .teammate:hover & {
+      #menu .item:hover &,
+      #menu .teammate:hover & {
         background-color: var(--menu-hover-bg);
       }
       #sticky & {
@@ -88,11 +88,11 @@ img {
       position: absolute;
       top: 1px;
       width: 12px;
-      .menu & {
+      #menu & {
         background-color: var(--menu-bg);
       }
-      .menu .item:hover &,
-      .menu .teammate:hover & {
+      #menu .item:hover &,
+      #menu .teammate:hover & {
         background-color: var(--menu-hover-bg);
       }
       #sticky & {
@@ -117,7 +117,7 @@ img {
   right: 500px;
   top: 0;
 }
-.menu {
+#menu {
   background-clip: padding-box;
   background-color: var(--menu-bg);
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -127,14 +127,15 @@ img {
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  padding: 10px 15px 5px;
+  padding: 10px 15px;
   position: absolute;
-  right: 215px;
+  right: 220px;
   top: 25px;
   width: 340px;
   h4 {
     font-size: 13px;
-    margin-block: 5px 5px;
+    margin-block: 5px;
+    text-align: left;
   }
   hr {
     background-color: rgba(0, 0, 0, 0.1);
@@ -142,6 +143,9 @@ img {
     height: 1px;
     margin-block: 10px;
     width: 100%;
+    + h4 {
+      margin-top: 15px;
+    }
   }
 
   .item {
@@ -152,18 +156,21 @@ img {
     height: 26px;
     line-height: 1;
     margin-inline: -10px;
+    overflow: hidden;
     padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     &:hover {
       background-color: var(--menu-hover-bg);
     }
     > span {
       font-size: 16px;
     }
-    > div {
+    .item-selector {
       align-items: center;
       display: flex;
       font-weight: 600;
-      gap: 10px;
+      gap: 5px;
       justify-content: flex-end;
       width: 35px;
     }
@@ -249,6 +256,50 @@ img {
       color: rgba(0, 0, 0, 0.3);
       font-size: 12px;
       margin-left: auto;
+    }
+  }
+
+  form {
+    padding-block: 5px;
+    text-align: right;
+    .button {
+      background-image: linear-gradient(#4892f7, #357df6);
+      border-radius: 5px;
+      border-width: 1px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+      color: white;
+      display: inline-block;
+      margin-block: 15px 5px;
+      margin-left: auto;
+      padding: 8px 12px;
+    }
+  }
+  .status-input {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    display: grid;
+    font-size: 16px;
+    grid-template-columns: 25px 25px 1fr;
+    padding-inline: 5px 0;
+    text-align: center;
+    .circle {
+      display: inline-block;
+      margin-top: -3px;
+      vertical-align: middle;
+    }
+    input {
+      background: none;
+      border: 0;
+      border-radius: 6px;
+      cursor: text;
+      font-family: inherit;
+      font-size: 14px;
+      margin-left: 2px;
+      outline: none;
+      padding: 10px 5px;
     }
   }
 }
