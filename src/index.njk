@@ -1,5 +1,11 @@
 {% extends 'presence.njk' %}
 
+{% block header_content %}
+  <link rel="stylesheet" href="{{ '/css/presence.css' | url }}">
+  <meta name="theme-color" content="#efecf2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#312b35" media="(prefers-color-scheme: dark)">
+{% endblock %}
+
 {% block content %}
   <div id="menubar">
     <div class="circle green"></div>
@@ -48,7 +54,7 @@
         <i class="fa-regular fa-chevron-right"></i>
       </div>
       <div class="teammate red open-menu-history">
-        <img src="https://yt3.ggpht.com/a-/AN66SAzLSNpfJ0sldByoeIu3IyVDS3dDKiCS3teO-Q=s900-mo-c-c0xffffffff-rj-k-no" alt="" height="40" width="40">
+        <img src="http://images6.fanpop.com/image/photos/35600000/Bruce-Wayne-wallpaper-bruce-wayne-35628088-1366-768.jpg" alt="" height="40" width="40">
         <div class="meta">
           <div class="circle red"></div>
           <h3>Bruce Wayne</h3>
