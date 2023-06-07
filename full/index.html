@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" id="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="robots" content="noindex">
+  <title>Team Presence App Test</title>
+  <script src="https://kit.fontawesome.com/4573453903.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/fffforum-test/css/full.css">
+  <meta name="theme-color" content="#efecf2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#312b35" media="(prefers-color-scheme: dark)">
+
+</head>
+<body>
+
+  
+
+  <div id="menu-default">
+    <header>
+      <h1>Presence</h1>
+      <div>
+        <a href="#" class="button open-menu-status">
+          <i class="fa-regular fa-plus"></i>
+          Change Status…
+        </a>
+        <a href="#" class="button">
+          <div class="circle green"></div>
+          Available
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <a href="#" class="blank-button">
+          <i class="fa-regular fa-circle-ellipsis"></i>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </div>
+    </header>
+    <section id="team">
+      <a href="#" class="teammate green">
+        <div class="avatar">
+          <img src="https://ca.slack-edge.com/T02UYK6DLNB-U04JXQE292Q-5a8c733e9344-512" alt="" height="40" width="40">
+          <div class="circle green"></div>
+        </div>
+        <div class="meta">
+          <h3>You</h3>
+          <div class="status"><span>✍️</span> Writing a blog post</div>
+          <time>1:37pm Brooklyn, NY</time>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#" class="teammate away">
+        <div class="avatar">
+          <img src="https://vignette.wikia.nocookie.net/marvelcrossroads/images/1/1c/Young_Barry_Allen_(Earth-9925).jpg/revision/latest?cb=20160529022850" alt="" height="40" width="40">
+          <div class="circle away"></div>
+        </div>
+        <div class="meta">
+          <h3>Barry Allen</h3>
+          <time>12:37pm Central City</time>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#" class="teammate red">
+        <div class="avatar">
+          <img src="http://images6.fanpop.com/image/photos/35600000/Bruce-Wayne-wallpaper-bruce-wayne-35628088-1366-768.jpg" alt="" height="40" width="40">
+          <div class="circle red"></div>
+        </div>
+        <div class="meta">
+          <h3>Bruce Wayne</h3>
+          <div class="status"><span>🏙️</span> On patrol in Gotham</div>
+          <time>1:37pm Gotham</time>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#" class="teammate green">
+        <div class="avatar">
+          <img src="https://4.bp.blogspot.com/-Tek3yg7Yh54/VVj1FwY8CrI/AAAAAAAAbiw/bqQfLjDuYYU/s1600/Clark-Kent-superman-36885818-1920-800%2B(640x534).jpg" alt="" height="40" width="40">
+          <div class="green circle"></div>
+        </div>
+        <div class="meta">
+          <h3>Clark Kent</h3>
+          <div class="status"><span>💼</span> Making journalistic integrity my whole personality – lorem ipsum ui ea aliqua irure ullamco minim sunt ullamco ad reprehenderit do aute pariatur id. Occaecat adipisicing occaecat nulla et aliqua mollit commodo veniam cupidatat magna elit incididunt aliqua exercitation. Ad ut mollit esse anim Lorem voluptate sit consequat excepteur labore velit consectetur consequat qui in. Cupidatat do aliqua veniam incididunt magna consectetur do ea duis. Irure deserunt labore id dolore. Labore occaecat culpa culpa et nostrud ipsum adipisicing qui velit eu. Aliquip magna in commodo elit est sint. Nostrud Lorem in consequat aliquip minim voluptate..</div>
+          <time>10:37am Metropolis</time>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#" class="teammate yellow">
+        <div class="avatar">
+          <img src="https://www.looper.com/img/gallery/catwoman-hunted-release-date-characters-and-plot-what-we-know-so-far/intro-1634598411.jpg" alt="" height="40" width="40">
+          <div class="circle yellow"></div>
+        </div>
+        <div class="meta">
+          <h3>Selina Kyle</h3>
+          <div class="status"><span>💎</span> Definitely at my desk</div>
+          <time>1:37pm Gotham</time>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </section>
+  </div>
+
+  <div id="menu-status" hidden>
+    <header>
+      <a href="#" class="blank-button open-menu-default">
+        <i class="fa-regular fa-chevron-left"></i>
+        Back
+      </a>
+    </header>
+    <hr>
+    <form>
+      <h4>Set a New Status</h4>
+      <div class="status-input">
+        <div><div class="circle green"></div></div>
+        <div class="emoji"><i class="fa-regular fa-smile"></i></div>
+        <input type="text" placeholder="Write a new status here" autofocus>
+      </div>
+      <br>
+      <h4>Select Recent</h4>
+      <div class="item">
+        <div class="circle green"></div>
+        <span>✍️</span>
+        Writing a blog post
+      </div>
+      <div class="item">
+        <div class="circle red"></div>
+        <span>🗓️</span>
+        In a meeting
+      </div>
+      <div class="item">
+        <div class="circle away"></div>
+        <span>🥪</span>
+        Lunching
+      </div>
+      <div class="item">
+        <div class="circle away"></div>
+        <span>💪</span>
+        Getting swole
+      </div>
+      <div class="item">
+        <div class="circle red"></div>
+        <span>🏖️</span>
+        Reminder: I’m out until next Tuesday
+      </div>
+      <div class="button open-menu-default">Save</div>
+    </form>
+  </div>
+
+  <div id="menu-history" hidden>
+    <div class="item open-menu-default">
+      <i class="fa-regular fa-chevron-left"></i>
+      Back
+    </div>
+    <hr>
+  </div>
+
+
+
+
+
+  <script>
+    // Menu Wrappers
+    const menuDefault = document.getElementById("menu-default");
+    const menuStatus = document.getElementById("menu-status");
+    const menuHistory = document.getElementById("menu-history");
+
+    // Buttons
+    const openMenuDefault = document.getElementsByClassName("open-menu-default");
+    const openMenuStatus = document.getElementsByClassName("open-menu-status");
+    const openMenuHistory = document.getElementsByClassName("open-menu-history");
+
+    // Button Handling
+    for (var i = 0; i < openMenuDefault.length; i++) {
+      openMenuDefault[i].addEventListener("click", function() {
+        menuDefault.style.display = "block";
+        menuStatus.style.display = "none";
+        menuHistory.style.display = "none";
+      });
+    }
+    for (var i = 0; i < openMenuStatus.length; i++) {
+      openMenuStatus[i].addEventListener("click", function() {
+        menuDefault.style.display = "none";
+        menuStatus.style.display = "block";
+        menuHistory.style.display = "none";
+      });
+    }
+    for (var i = 0; i < openMenuHistory.length; i++) {
+      openMenuHistory[i].addEventListener("click", function() {
+        menuDefault.style.display = "none";
+        menuStatus.style.display = "none";
+        menuHistory.style.display = "block";
+      });
+    }
+  </script>
+
+
+</body>
+</html>
